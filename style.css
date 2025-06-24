@@ -36,15 +36,43 @@ body {
   a:hover {
     text-decoration: underline;
   }
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
   
   .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    margin: 20px auto;
-    display: block;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profile-pic {
+      margin-bottom: 20px;
+    }
   }
   
