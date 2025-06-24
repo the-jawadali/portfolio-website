@@ -1,88 +1,229 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset & base */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background: #f9f9f9;
-    color: #333;
   }
   
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
   header {
     background: #222;
     color: white;
     padding: 2rem 1rem;
     text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   }
   
+  .glow-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+    animation: glow 2s ease-in-out infinite alternate;
+    color: white;
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      text-shadow:
+        0 0 5px #aaa,
+        0 0 10px #aaa,
+        0 0 15px #aaa,
+        0 0 20px #aaa;
+    }
+    50% {
+      text-shadow:
+        0 0 8px #00ffff,
+        0 0 14px #00ffff,
+        0 0 20px #00ffff,
+        0 0 26px #00ffff;
+    }
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #111;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: inset 0 -2px 4px rgba(0, 255, 255, 0.15);
+    margin-bottom: 2rem;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover,
+  nav a[aria-current="page"] {
+    color: #00ffff;
+  }
+  
+  nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #00ffff;
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  nav a:hover::after,
+  nav a[aria-current="page"]::after {
+    width: 100%;
+  }
+  
+  /* Main content containers */
+  main,
   section {
-    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
   }
   
-  /* Optional: Add a consistent center layout only to other sections */
+  .journey-content {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #222;
+  }
+  
   .projects-section,
   .contact-section {
-    max-width: 800px;
-    margin: auto;
+    background: #f0f0f0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
   }
   
+  .projects-section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+  }
   
+  .projects-section li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .projects-section a {
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  .projects-section a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  /* Footer */
   footer {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
     background: #222;
     color: white;
-    margin-top: 2rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
   }
   
-  a {
-    color: #007bff;
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+    }
+  
+    .journey-content,
+    .projects-section,
+    .contact-section {
+      padding: 1.5rem;
+    }
+  }
+
+  nav a.active {
+    color: #00ffff;
+  }
+  nav a.active::after {
+    width: 100%;
+  }
+
+  .header-left a {
     text-decoration: none;
   }
   
-  a:hover {
-    text-decoration: underline;
+  .header-left a:focus {
+    outline: none;
   }
 
-  .about-container {
+  header {
+    background: #222;
+    color: white;
+    padding: 1.5rem 2rem;
+    justify-content: center; /* centers the header content */
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .story-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 40px;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
+    gap: 15px;
+    margin-bottom: 1rem;
   }
   
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+  .story-img {
+    width: 100px;       /* adjust size */
+    height: 100px;
     object-fit: cover;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-position: top;
+    border-radius: 8px;  /* slightly rounded corners */
   }
   
-  .about-text {
-    flex: 1;
-    min-width: 280px;
-    max-width: 600px;
-    font-size: 1rem;
-    line-height: 1.6;
+  .my-story-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 800px;  /* keep content width reasonable */
+    margin: 0 auto 2rem auto; /* center section horizontally with bottom margin */
   }
   
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .profile-pic {
-      margin-bottom: 20px;
-    }
+  .my-story-img {
+    width: 300px;       /* rectangle size */
+    height: 450px;
+    object-fit: cover;
+    border: 3px solid black; /* border color cyan */
+    border-radius: 15px;  /* slightly rounded corners */
+    flex-shrink: 0;      /* prevent shrinking */
   }
   
-  .about-section {
-    background-color: #f0f0f0;
+  .my-story-text {
+    flex: 1;             /* take remaining horizontal space */
+    color: #222;
+  }
+  
+  .my-story-text h2 {
+    margin-bottom: 0.8rem;
   }
   
