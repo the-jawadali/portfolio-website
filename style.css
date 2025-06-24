@@ -16,9 +16,15 @@ body {
   
   section {
     padding: 2rem 1rem;
+  }
+  
+  /* Optional: Add a consistent center layout only to other sections */
+  .projects-section,
+  .contact-section {
     max-width: 800px;
     margin: auto;
   }
+  
   
   footer {
     text-align: center;
@@ -74,5 +80,9 @@ body {
     .profile-pic {
       margin-bottom: 20px;
     }
+  }
+  
+  .about-section {
+    background-color: #f0f0f0;
   }
   
