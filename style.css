@@ -226,4 +226,56 @@
   .my-story-text h2 {
     margin-bottom: 0.8rem;
   }
+
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #1f1493;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-left: 60px;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-date {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content {
+    background: #9a9a9a;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0, 1);
+  }
+  
+  .timeline-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 600px) {
+    .timeline::before {
+      left: 20px;
+    }
+  
+    .timeline-item {
+      margin-left: 50px;
+    }
+  }
+  
   
