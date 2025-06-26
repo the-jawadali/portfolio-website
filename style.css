@@ -163,8 +163,13 @@
   }
 
   nav a.active {
-    color: #00ffff;
+    color: #fff;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
+  
+
   nav a.active::after {
     width: 100%;
   }
