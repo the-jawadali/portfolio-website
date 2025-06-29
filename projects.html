@@ -19,22 +19,29 @@
   </nav>
   
   <section class="projects-section">
-    <h2>Projects</h2>
-    <div class="project-card" onclick="window.open('#', '_blank')">
-      <h3>Cafe Menu</h3>
-      <p>A responsive web app showcasing a coffee shop’s menu with modern UI design.</p>
-      <!-- URL: https://the-jawadali.github.io/cafe_menu/ -->
-      <!-- Example URL (replace #): https://the-jawadali.github.io/cafe_menu/ -->
-    </div>
-    <div class="project-card" onclick="window.open('#', '_blank')">
-      <h3>Project 2</h3>
-      <p>Description coming soon.</p>
-      <!-- URL: # -->
-    </div>
-    <div class="project-card" onclick="window.open('#', '_blank')">
-      <h3>Project 3</h3>
-      <p>Description coming soon.</p>
-      <!-- URL: # -->
+    <div class="project-viewer">
+      <div class="project-card active" data-index="0">
+        <h3>Project 1: Cafe Menu</h3>
+        <p>A styled HTML/CSS café menu built as part of my first project.</p>
+        <!-- <a href="https://the-jawadali.github.io/cafe_menu/" target="_blank">View Project</a> -->
+      </div>
+  
+      <div class="project-card" data-index="1">
+        <h3>Project 2: To-Do List App</h3>
+        <p>A JavaScript-powered to-do list app with add/remove functionality.</p>
+        <!-- <a href="https://example.com/project2" target="_blank">View Project</a> -->
+      </div>
+  
+      <div class="project-card" data-index="2">
+        <h3>Project 3: Portfolio Redesign</h3>
+        <p>Fully responsive portfolio layout made using CSS Grid and Flexbox.</p>
+        <!-- <a href="https://example.com/project3" target="_blank">View Project</a> -->
+      </div>
+  
+      <div class="project-nav">
+        <button id="prevBtn">⟵</button>
+        <button id="nextBtn">⟶</button>
+      </div>
     </div>
   </section>
   
@@ -42,5 +49,6 @@
   <footer>
     <p>© 2025 Jawad Ali. All rights reserved.</p>
   </footer>
+  <script src="js/scripts.js" defer></script>
 </body>
 </html>
