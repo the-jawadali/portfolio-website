@@ -1,48 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Journey | Jawad Ali</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="header-left">
-      <a href="index.html">
-      </a>
-      <div class="header-text">
-        <h1>Jawad Ali</h1>
-        <p class="glow-text">Aspiring Software Engineer</p> <!-- Customize per page -->
-      </div>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Portfolio</title>
 
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="journey.html">Journey</a>
-    <a href="contacts.html">Contact</a>
-  </nav>
-  
-  
-  <section class="my-story-section">
-    <div class="my-story-container">
-      <img src="https://i.imgur.com/Y9gIjID.jpeg" alt="Jawad Logo" class="my-story-img" />
-      <div class="my-story-text">
-        <h2>My Story</h2>
-        <p>
-          I am a Motivated and Dedicated aspiring software engineer with a strong academic background in Applied Science and Core Maths, having completed a BTEC Level 3 National Extended Diploma. After discovering a passion for technology through a coding bootcamp and mentorship from my older brother in the industry, I have developed practical skills in HTML, CSS, JavaScript, and Python, alongside various other programming languages and soft skills such as problem-solving. I also value teamwork and communication, essential skills for thriving in collaborative software development environments. I am eager to pursue an opportunity which would allow me to gain hands-on experience, enhance my skills, and grow into a role within the tech industry.
-        </p>
-      </div>
-    </div>
-  </section>
-  
-    
-  </main>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-  <footer>
-    <p>© 2025 Jawad Ali. All rights reserved.</p>
-  </footer>
-</body>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white text-gray-900 font-inter">
+    <!-- Navbar -->
+    <nav class="p-4 bg-blue-600 text-white flex justify-between items-center">
+      <h1 class="text-xl font-bold">My Tech Portfolio</h1>
+      <ul class="flex gap-4">
+        <li><a href="#about" class="hover:underline">About</a></li>
+        <li><a href="#projects" class="hover:underline">Projects</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="text-center py-16 bg-gray-100">
+      <h2 class="text-4xl font-bold mb-4">AssalamuAlaikum, I'm Jawad</h2>
+      <p class="text-lg text-gray-700">
+        Aspiring Full-Stack Developer | Trader | Lifelong Learner
+      </p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 px-6 max-w-4xl mx-auto">
+      <h3 class="text-2xl font-bold mb-4">About Me</h3>
+      <p class="text-gray-700">
+        I'm currently learning full-stack development while also actively trading XAUUSD. I'm passionate about building useful digital tools and finding halal ways to increase income. My long-term vision is to merge Islamic principles with modern tech and finance.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 px-6 max-w-4xl mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="border p-4 rounded-lg shadow-sm">
+          <h4 class="font-bold text-lg mb-2">XAUUSD Strategy Tracker</h4>
+          <p class="text-gray-600">
+            A simple web app to log and analyze Smart Money Concept trades using localStorage.
+          </p>
+        </div>
+        <div class="border p-4 rounded-lg shadow-sm">
+          <h4 class="font-bold text-lg mb-2">Portfolio Website</h4>
+          <p class="text-gray-600">
+            This website you're seeing now. Built with Tailwind and simplicity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 px-6 max-w-4xl mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
+      <form class="grid gap-4">
+        <input type="text" placeholder="Your Name" class="border p-2 rounded" />
+        <input type="email" placeholder="Your Email" class="border p-2 rounded" />
+        <textarea placeholder="Your Message" class="border p-2 rounded h-32"></textarea>
+        <button
+          type="submit"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Send
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 text-sm text-gray-500">
+      © 2025 Jawad. All rights reserved.
+    </footer>
+  </body>
 </html>
