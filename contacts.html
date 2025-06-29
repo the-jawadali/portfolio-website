@@ -2,32 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Jawad</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jawad - Contact</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Jawad Ali</h1>
-    <p class="glow-text">Contacts</p>
+  <!-- Navigation bar -->
+  <header class="navbar sticky">
+    <nav class="container nav-container">
+      <a href="index.html" class="logo">Jawad</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="journey.html">Journey</a>
-    <a href="contacts.html" class="active">Contacts</a>
-  </nav>
-  
-  <section class="contact-section">
-    <h2>Contact</h2>
-    <p>Email: jawadali04@outlook.com</p>
-    <p>GitHub: <a href="https://github.com/the-jawadali" target="_blank">the-jawadali</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/the-jawad-ali/" target="_blank">Jawad Ali</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/the.jawadali/" target="_blank">the.jawadali</a></p>
-  </section>
 
-  <footer>
-    <p>© 2025 Jawad Ali. All rights reserved.</p>
+  <main class="container contact-page">
+    <h1>Contact Me</h1>
+    <!-- Contact form -->
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+
+      <label for="message">Message / Query</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <!-- Social media links -->
+    <section class="social-links">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn" class="social-icon linkedin"></a>
+      <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub" class="social-icon github"></a>
+      <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter" class="social-icon twitter"></a>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© 2025 Jawad. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
