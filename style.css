@@ -284,48 +284,43 @@ header {
 }
 
 .project-viewer {
-  position: relative;
-  perspective: 1000px;
   max-width: 600px;
   margin: 0 auto;
-  text-align: center;
+  position: relative;
 }
 
 .project-card {
-  background: #fff;
+  background: white;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s ease;
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  opacity: 0;
-  transform: rotateY(180deg);
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  z-index: 0;
 }
 
 .project-card.active {
+  display: block;
   opacity: 1;
-  transform: rotateY(0deg);
-  z-index: 1;
+  transform: scale(1);
+  z-index: 10;
 }
 
 .project-nav {
-  margin-top: 15rem;
   display: flex;
   justify-content: space-between;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 15rem;
 }
 
 .project-nav button {
   background-color: #111;
-  color: #fff;
+  color: white;
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 8px;
