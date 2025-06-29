@@ -1,88 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Portfolio</title>
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
     />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
-  <body class="bg-white text-gray-900 font-inter">
-    <!-- Navbar -->
-    <nav class="p-4 bg-blue-600 text-white flex justify-between items-center">
-      <h1 class="text-xl font-bold">My Tech Portfolio</h1>
-      <ul class="flex gap-4">
-        <li><a href="#about" class="hover:underline">About</a></li>
-        <li><a href="#projects" class="hover:underline">Projects</a></li>
-        <li><a href="#contact" class="hover:underline">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="text-center py-16 bg-gray-100">
-      <h2 class="text-4xl font-bold mb-4">AssalamuAlaikum, I'm Jawad</h2>
-      <p class="text-lg text-gray-700">
-        Aspiring Full-Stack Developer | Trader | Lifelong Learner
-      </p>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="py-12 px-6 max-w-4xl mx-auto">
-      <h3 class="text-2xl font-bold mb-4">About Me</h3>
-      <p class="text-gray-700">
-        I'm currently learning full-stack development while also actively trading XAUUSD. I'm passionate about building useful digital tools and finding halal ways to increase income. My long-term vision is to merge Islamic principles with modern tech and finance.
-      </p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-12 px-6 max-w-4xl mx-auto">
-      <h3 class="text-2xl font-bold mb-4">Projects</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="border p-4 rounded-lg shadow-sm">
-          <h4 class="font-bold text-lg mb-2">XAUUSD Strategy Tracker</h4>
-          <p class="text-gray-600">
-            A simple web app to log and analyze Smart Money Concept trades using localStorage.
-          </p>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#131d20] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#293c42] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Tech Portfolio</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">About</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Projects</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Contact</a>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#293c42] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-white" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#293c42] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-white" data-icon="List" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCci7HzECmmANQIDkBitg-qbx6wzZ_3PuEBaae_Nf6TbVcBVlXGHFe0gxYTwB0qWCKp5ceK1bujzzNPmBF3aRJQx2vHxkstTII-QlzWrBZPXowzIPjSVSnqKeL6obmVGNpu85C0YuKf7V9T5kZj2DoqSSSJe9wAiXLg2NI_ArVz16fNuK7YV0WY9TcDgSQtU9y9jnJaGI1flH6pD8a1nmJUQANWFVjmh9cGYegVNvo0nOalGu3cxXew3A0lFJWO3SOtDLYoaIlg3LI");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBv2CEx2SgeXZ7SS8mqaIkqbrbAncAlNgIKqjSQ-CW_Zt7Ij1UOaYzUmalgVVYSp5Yx-nR74K39VeRCYfw9ZsR9hGvkvhrc9ff7spTjtb5h63ii3vIwiuPazmQkGBlwgYQ-5GkM1I9AzhKxUD_Y1AB0KA4i01KYlid7_KvKXCJZuwFrUsuvJ7Redl5-S8bHkx9bIdPZ1MvVp8vxxMeY01MqROH7BHD3dEOOWhRrsvU4UuJrtgCo-Lx6HTqjPkasPQngbrnkknEx2GQ");'
+                >
+                  <div class="flex flex-col gap-2 text-center">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Innovating the Future of Technology
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      I am a passionate software engineer specializing in creating cutting-edge solutions. Explore my portfolio to see how I blend creativity with technical
+                      expertise to solve complex problems and deliver exceptional results.
+                    </h2>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#addcea] text-[#131d20] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">View Projects</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured Projects</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2Hp2D9y-UO-Uli-b8ByiChtDTzWE6gDbk-efdlWm5eO_b9-X-E6v5DriPEWzYAunr0dSG98-t1C9927yr2LIVh8eXXJMCo5TR8XiFzRfcG_3m4YvrJzN1qQjFnjALEY4oDcSBgWSYWPe9q2RmIdQBX1EoLgBhwAItmkzQ6CJTbEVfDUJp4kOgj8dLgLLqhjPjBq37Z_jJyH9GxS8lViAwc0ebps-skpzDLKzgpb0DIIC6z9t4gople0661DBzJppU67Bpga8x0BA");'
+                ></div>
+                <div>
+                  <p class="text-white text-base font-medium leading-normal">AI-Powered Personal Assistant</p>
+                  <p class="text-[#9ab8c1] text-sm font-normal leading-normal">An intelligent assistant that learns user preferences and automates daily tasks.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZ5hOP6Mbt7ek_sjoRhLufge0BMyVXmkQ8V3xXxv5Ubh-XonebkyiJVqi3GbdNrXNEgpijDS0r_lgu2T8el8t2yRgqaWKcMr00KpiJ4gulLdMfj3klI5A4HjSWiOU3cBdPWYW7_JmD6dSmm2FpnYXacFckYEMB2umSta8d0I5w7KrIZDml2JLUIbet2Y-Qlyke_ZHXmyz7dslbTP-7YxBFAiIyVUYSzx7f-cZ4Gr2mbXH-DVrltGT2c4YUAqAseGz0fGN8YH-H7Po");'
+                ></div>
+                <div>
+                  <p class="text-white text-base font-medium leading-normal">Interactive Data Visualization Tool</p>
+                  <p class="text-[#9ab8c1] text-sm font-normal leading-normal">A dynamic tool for visualizing complex datasets in an intuitive and engaging way.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFoowbJJ9hUb_zST92VdA9N53N85BLwTBBwFmPRQmU1IvPOV9DOfa5flV8r7hXfQU1PFJDR4ysALWG8loovP_v2ixszG5_TX7lqaHAt0mbowX-qYspGoDK9vIzXZDBukHyJFN3wYXT1GwuDltsBYxzB8PBDPYumd9g0sQbw1KXcKctAeQuHFDbylvozhUIvZ3NKHBM6SPLKa7W9SuKNU0bEPE-BceOHKoyRdEHDxYR9u9CkZJomQQiE-yJ9QiSAVnCZhnw_2kjhbk");'
+                ></div>
+                <div>
+                  <p class="text-white text-base font-medium leading-normal">Smart Home Automation System</p>
+                  <p class="text-[#9ab8c1] text-sm font-normal leading-normal">
+                    A system that integrates various smart devices to create a seamless and efficient home environment.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About Me</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              I am a highly motivated software engineer with a strong background in computer science and a passion for developing innovative solutions. With over 5 years of
+              experience in the tech industry, I have honed my skills in various programming languages and frameworks, allowing me to tackle complex challenges and deliver
+              high-quality results. My expertise spans across AI, data visualization, and IoT, enabling me to create cutting-edge applications that push the boundaries of
+              technology. I am dedicated to continuous learning and staying updated with the latest advancements in the field, ensuring that my work is always at the forefront of
+              innovation. My goal is to leverage my technical skills and creative thinking to make a meaningful impact in the tech world, one project at a time.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact</h2>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-white text-base font-medium leading-normal pb-2">Email</p>
+                <input
+                  placeholder="your.email@example.com"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#293c42] focus:border-none h-14 placeholder:text-[#9ab8c1] p-4 text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-white text-base font-medium leading-normal pb-2">Message</p>
+                <textarea
+                  placeholder="Enter your message"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#293c42] focus:border-none min-h-36 placeholder:text-[#9ab8c1] p-4 text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-end">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#addcea] text-[#131d20] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Send</span>
+              </button>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Connect with Me</h2>
+            <div class="flex justify-center">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 max-w-[480px] justify-center">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#293c42] text-white text-sm font-bold leading-normal tracking-[0.015em] grow"
+                >
+                  <span class="truncate">Twitter</span>
+                </button>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#293c42] text-white text-sm font-bold leading-normal tracking-[0.015em] grow"
+                >
+                  <span class="truncate">LinkedIn</span>
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 max-w-[480px] justify-center">
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#293c42] text-white text-sm font-bold leading-normal tracking-[0.015em] grow"
+                >
+                  <span class="truncate">GitHub</span>
+                </button>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#293c42] text-white text-sm font-bold leading-normal tracking-[0.015em] grow"
+                >
+                  <span class="truncate">Blog</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="border p-4 rounded-lg shadow-sm">
-          <h4 class="font-bold text-lg mb-2">Portfolio Website</h4>
-          <p class="text-gray-600">
-            This website you're seeing now. Built with Tailwind and simplicity.
-          </p>
-        </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="#">
+                  <div class="text-[#9ab8c1]" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#9ab8c1]" data-icon="LinkedinLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#9ab8c1]" data-icon="GithubLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <p class="text-[#9ab8c1] text-base font-normal leading-normal">@2024 Tech Portfolio. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
       </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 px-6 max-w-4xl mx-auto">
-      <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
-      <form class="grid gap-4">
-        <input type="text" placeholder="Your Name" class="border p-2 rounded" />
-        <input type="email" placeholder="Your Email" class="border p-2 rounded" />
-        <textarea placeholder="Your Message" class="border p-2 rounded h-32"></textarea>
-        <button
-          type="submit"
-          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >
-          Send
-        </button>
-      </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-4 text-sm text-gray-500">
-      © 2025 Jawad. All rights reserved.
-    </footer>
+    </div>
   </body>
 </html>
