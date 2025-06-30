@@ -1,23 +1,32 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".project-card");
-    let current = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.project-card');
+    let currentIndex = 0;
   
-    function updateCards() {
-      cards.forEach((card, idx) => {
-        card.classList.toggle("active", idx === current);
+    function showCard(idx) {
+      cards.forEach((card, i) => {
+        card.classList.toggle('active', i === idx);
       });
     }
   
-    document.getElementById("nextBtn").addEventListener("click", () => {
-      current = (current + 1) % cards.length;
-      updateCards();
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const url = card.getAttribute('data-url');
+        if (url && url !== '#') {
+          window.open(url, '_blank');
+        }
+      });
     });
   
-    document.getElementById("prevBtn").addEventListener("click", () => {
-      current = (current - 1 + cards.length) % cards.length;
-      updateCards();
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      showCard(currentIndex);
     });
   
-    updateCards();
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showCard(currentIndex);
+    });
+  
+    showCard(currentIndex);
   });
   
