@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Jawad</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jawad Ali - Contact</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<!-- Font Awesome for social icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
 </head>
 <body>
-  <header>
-    <h1>Jawad Ali</h1>
-    <p class="glow-text">Contacts</p>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="journey.html">Journey</a>
-    <a href="contacts.html" class="active">Contacts</a>
-  </nav>
-  
-  <section class="contact-section">
-    <h2>Contact</h2>
-    <p>Email: jawadali04@outlook.com</p>
-    <p>GitHub: <a href="https://github.com/the-jawadali" target="_blank">the-jawadali</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/the-jawad-ali/" target="_blank">Jawad Ali</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/the.jawadali/" target="_blank">the.jawadali</a></p>
-  </section>
+<nav>
+  <div class="logo">Jawad Ali</div>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="journey.html">Journey</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
 
-  <footer>
-    <p>© 2025 Jawad Ali. All rights reserved.</p>
-  </footer>
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <p>If you want to get in touch, send me a message or connect via social media.</p>
+
+  <form action="mailto:jawadali04@outlook.com" method="post" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Your Name" required />
+    <input type="email" name="Email" placeholder="Your Email" required />
+    <textarea name="Message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <div style="margin-top: 30px;">
+    <a
+      href="https://www.linkedin.com/in/the-jawad-ali/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-icon"
+      aria-label="LinkedIn"
+      ><i class="fab fa-linkedin"></i
+    ></a>
+    <a
+      href="https://www.instagram.com/the.jawadali/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-icon"
+      aria-label="Instagram"
+      ><i class="fab fa-instagram"></i
+    ></a>
+    <a
+      href="https://github.com/the-jawadali"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-icon"
+      aria-label="GitHub"
+      ><i class="fab fa-github"></i
+    ></a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Jawad Ali — All Rights Reserved
+</footer>
+
+<script>
+  // Highlight active nav link
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    if(link.href === window.location.href) link.classList.add('active');
+  });
+</script>
 </body>
 </html>

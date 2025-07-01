@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Journey | Jawad Ali</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jawad Ali - Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <a href="index.html">
-      </a>
-      <div class="header-text">
-        <h1>Jawad Ali</h1>
-        <p class="glow-text">Aspiring Software Engineer</p> <!-- Customize per page -->
-      </div>
-    </div>
-  </header>
+<nav>
+  <div class="logo">Jawad Ali</div>
+  <ul>
+    <li><a href="home.html" class="active">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="journey.html">Journey</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="journey.html">Journey</a>
-    <a href="contacts.html">Contact</a>
-  </nav>
-  
-  
-  <section class="my-story-section">
-    <div class="my-story-container">
-      <img src="https://i.imgur.com/Y9gIjID.jpeg" alt="Jawad Logo" class="my-story-img" />
-      <div class="my-story-text">
-        <h2>My Story</h2>
-        <p>
-          I am a Motivated and Dedicated aspiring software engineer with a strong academic background in Applied Science and Core Maths, having completed a BTEC Level 3 National Extended Diploma. After discovering a passion for technology through a coding bootcamp and mentorship from my older brother in the industry, I have developed practical skills in HTML, CSS, JavaScript, and Python, alongside various other programming languages and soft skills such as problem-solving. I also value teamwork and communication, essential skills for thriving in collaborative software development environments. I am eager to pursue an opportunity which would allow me to gain hands-on experience, enhance my skills, and grow into a role within the tech industry.
-        </p>
-      </div>
-    </div>
-  </section>
-  
-    
-  </main>
+<section id="home">
+  <h1>Assalamu Alaikum, I'm Jawad Ali</h1>
+  <img src="https://i.imgur.com/Y9gIjID.jpeg" alt="Jawad Ali" class="profile-pic" />
+  <p>
+    A passionate software engineer, trader, and seeker of knowledge. My journey is grounded in Islam,  
+    striving to balance deen and dunya through discipline, patience, and constant learning.  
+    I’m dedicated to growing in both the spiritual and professional realms — inshaAllah.
+  </p>
+  <p>
+    Welcome to my portfolio. Feel free to explore my projects, journey, and contact me.
+  </p>
+</section>
 
-  <footer>
-    <p>© 2025 Jawad Ali. All rights reserved.</p>
-  </footer>
+<footer>
+  &copy; 2025 Jawad Ali — All Rights Reserved
+</footer>
+
+<script>
+  // Highlight active nav link
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    if(link.href === window.location.href) link.classList.add('active');
+  });
+</script>
 </body>
 </html>
