@@ -1,285 +1,285 @@
-/* ==== RESET & BASE STYLES ==== */
+/* Reset & base */
 * {
-  box-sizing: border-box; /* Include padding and border in element’s total width/height */
-  margin: 0;              /* Remove default browser margin on all elements */
-  padding: 0;             /* Remove default browser padding on all elements */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif; /* Clean, readable sans-serif font */
-  background: #f9f9f9;            /* Light gray background for subtle contrast */
-  color: #333;                    /* Dark gray text for readability */
-  line-height: 1.6;               /* Spacing between lines to improve legibility */
-  min-height: 100vh;              /* Make sure body takes full viewport height */
-  display: flex;                  /* Flex container to structure page layout */
-  flex-direction: column;         /* Stack children vertically */
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ==== HEADER ==== */
+/* Header */
 header {
-  background: #222;                   /* Dark background for header */
-  color: white;                      /* White text for contrast */
-  padding: 1.5rem 2rem;              /* Space inside the header for breathing room */
-  text-align: center;                /* Center the header text */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow below header */
-  justify-content: center;           /* Center children horizontally (for flex containers) */
-  align-items: center;               /* Center children vertically (for flex containers) */
+  background: #222;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ==== NAVIGATION BAR ==== */
+.glow-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+  animation: glow 2s ease-in-out infinite alternate;
+  color: white;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #aaa,
+      0 0 10px #aaa,
+      0 0 15px #aaa,
+      0 0 20px #aaa;
+  }
+  50% {
+    text-shadow:
+      0 0 8px #00ffff,
+      0 0 14px #00ffff,
+      0 0 20px #00ffff,
+      0 0 26px #00ffff;
+  }
+}
+
+/* Navigation */
 nav {
-  background-color: #111;                            /* Even darker background for nav */
-  text-align: center;                               /* Center the nav links horizontally */
-  padding: 1rem 0;                                  /* Vertical padding for spacing */
-  box-shadow: inset 0 -2px 4px rgba(0, 255, 255, 0.15); /* Subtle glowing underline effect */
-  margin-bottom: 2rem;                              /* Space below nav to separate from content */
+  background-color: #111;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: inset 0 -2px 4px rgba(0, 255, 255, 0.15);
+  margin-bottom: 2rem;
 }
 
 nav a {
-  color: white;                    /* White link text */
-  margin: 0 1.5rem;                /* Horizontal spacing between links */
-  text-decoration: none;           /* Remove default underline */
-  font-weight: bold;               /* Make links bold for emphasis */
-  position: relative;              /* Needed for ::after pseudo-element positioning */
-  transition: color 0.3s;          /* Smooth color change on hover/focus */
+  color: white;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
 }
 
 nav a:hover,
-nav a.active,
 nav a[aria-current="page"] {
-  color: #00ffff;                 /* Cyan color for active or hovered link */
+  color: #00ffff;
 }
 
 nav a::after {
-  content: "";                   /* Empty content to create a decorative underline */
-  display: block;                /* Make the underline a block element */
-  height: 2px;                  /* Thickness of underline */
-  background: #00ffff;           /* Cyan underline */
-  position: absolute;            /* Position relative to nav link */
-  width: 0;                     /* Start with zero width */
-  left: 0;                      /* Align underline to left */
-  bottom: -5px;                 /* Position just below the link text */
-  transition: width 0.3s ease-in-out; /* Animate underline width */
+  content: "";
+  display: block;
+  height: 2px;
+  background: #00ffff;
+  position: absolute;
+  width: 0%;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
 }
 
 nav a:hover::after,
-nav a.active::after,
 nav a[aria-current="page"]::after {
-  width: 100%;                  /* Expand underline to full width on hover/active */
+  width: 100%;
 }
 
-/* ==== MAIN CONTENT SECTIONS ==== */
+/* Main content containers */
 main,
 section {
-  max-width: 800px;               /* Limit content width for readability */
-  margin: 0 auto 3rem auto;       /* Center horizontally and add bottom spacing */
-  padding: 0 1rem;                /* Small horizontal padding */
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
 }
 
-/* Shared styles for Journey, Projects & Contact sections */
-.journey-content,
+.journey-content {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #222;
+}
+
 .projects-section,
 .contact-section {
-  background: #f0f0f0;              /* Light gray background for content blocks */
-  padding: 2rem;                    /* Padding inside the blocks */
-  border-radius: 10px;              /* Rounded corners for soft look */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
-  font-size: 1.1rem;                /* Slightly larger font for readability */
-  color: #222;                     /* Darker text for contrast */
-  line-height: 1.7;                /* Line spacing for easier reading */
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
 }
 
-/* Project links styling inside projects section */
 .projects-section ul {
-  list-style-type: disc;            /* Default bullet style */
-  padding-left: 1.5rem;             /* Indent list items */
-  margin-top: 1rem;                 /* Space above the list */
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
 }
 
 .projects-section li {
-  margin-bottom: 0.8rem;            /* Space between list items */
+  margin-bottom: 0.8rem;
 }
 
 .projects-section a {
-  color: #007bff;                   /* Blue links */
-  font-weight: 600;                 /* Semi-bold text */
-  text-decoration: none;            /* Remove underline */
+  color: #007bff;
+  font-weight: 600;
 }
 
 .projects-section a:hover {
-  text-decoration: underline;       /* Underline on hover for clarity */
-  color: #0056b3;                   /* Darker blue on hover */
+  text-decoration: underline;
+  color: #0056b3;
 }
 
-/* ==== FOOTER ==== */
+/* Footer */
 footer {
-  text-align: center;              /* Center text in footer */
-  padding: 1rem 0;                 /* Vertical padding */
-  background: #222;                /* Dark footer background */
-  color: white;                   /* White text */
-  margin-top: auto;               /* Push footer to bottom if page is short */
-  font-size: 0.9rem;             /* Smaller font for footer */
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3); /* Shadow on top to separate from content */
+  text-align: center;
+  padding: 1rem 0;
+  background: #222;
+  color: white;
+  margin-top: auto;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
 }
 
-/* ==== RESPONSIVE NAVIGATION ==== */
+/* Responsive */
 @media (max-width: 768px) {
   nav a {
-    display: inline-block;         /* Stack nav links nicely on smaller screens */
-    margin: 0.5rem 1rem;           /* Reduce spacing for tight view */
+    display: inline-block;
+    margin: 0.5rem 1rem;
   }
-  
+
   .journey-content,
   .projects-section,
   .contact-section {
-    padding: 1.5rem;               /* Reduce padding for smaller screens */
+    padding: 1.5rem;
   }
 }
 
-/* ==== TIMELINE ==== */
-.timeline {
-  position: relative;              /* To position timeline line absolutely */
-  max-width: 800px;                /* Max width matches content sections */
-  margin: 0 auto;                  /* Center horizontally */
-  padding: 2rem 1rem;              /* Padding around timeline */
+nav a.active {
+  color: #fff;
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-/* Vertical timeline line */
+
+nav a.active::after {
+  width: 100%;
+}
+
+.header-left a {
+  text-decoration: none;
+}
+
+.header-left a:focus {
+  outline: none;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 1.5rem 2rem;
+  justify-content: center; /* centers the header content */
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.story-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1rem;
+}
+
+.story-img {
+  width: 100px;       /* adjust size */
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;  /* slightly rounded corners */
+}
+
+.my-story-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 800px;  /* keep content width reasonable */
+  margin: 0 auto 2rem auto; /* center section horizontally with bottom margin */
+}
+
+.my-story-img {
+  width: 300px;       /* rectangle size */
+  height: 450px;
+  object-fit: cover;
+  border: 3px solid black; /* border color cyan */
+  border-radius: 15px;  /* slightly rounded corners */
+  flex-shrink: 0;      /* prevent shrinking */
+}
+
+.my-story-text {
+  flex: 1;             /* take remaining horizontal space */
+  color: #222;
+}
+
+.my-story-text h2 {
+  margin-bottom: 0.8rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
 .timeline::before {
-  content: '';                    /* Empty content for decorative line */
-  position: absolute;             /* Position relative to timeline container */
-  left: 30px;                    /* Fixed position from left */
+  content: '';
+  position: absolute;
+  left: 30px;
   top: 0;
   bottom: 0;
-  width: 4px;                    /* Thickness of timeline line */
-  background: #1f1493;           /* Deep blue color */
+  width: 4px;
+  background: #1f1493;
 }
 
-/* Each item on the timeline */
 .timeline-item {
   position: relative;
-  margin-left: 60px;             /* Offset right of timeline line */
-  margin-bottom: 2rem;           /* Space below each timeline event */
+  margin-left: 60px;
+  margin-bottom: 2rem;
 }
 
-/* Date label on timeline items */
 .timeline-date {
-  font-weight: bold;             /* Emphasize date */
+  font-weight: bold;
   color: black;
-  margin-bottom: 0.5rem;         /* Space below date */
+  margin-bottom: 0.5rem;
 }
 
-/* Content box for each timeline event */
 .timeline-content {
-  background: #9a9a9a;            /* Medium gray background */
-  padding: 1rem;                  /* Padding inside box */
-  border-radius: 20px;            /* Rounded corners */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background: #9a9a9a;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0, 1);
 }
 
 .timeline-content h3 {
-  margin-top: 0;                 /* Remove default margin above heading */
-  margin-bottom: 0.5rem;         /* Space below heading */
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
-/* Timeline responsive tweaks */
 @media (max-width: 600px) {
   .timeline::before {
-    left: 20px;                 /* Move timeline line slightly left */
+    left: 20px;
   }
 
   .timeline-item {
-    margin-left: 50px;          /* Reduce left margin */
+    margin-left: 50px;
   }
 }
 
-/* ==== PROJECT SLIDER ==== */
-.project-viewer {
-  max-width: 900px;  /* Make this bigger if you want wider card */
-  width: 100%;       /* take full width of parent */
-  height: 450px;
-  margin: 3rem auto;
-  background-color: #414141;
-  border-radius: 16px;
-  padding: 2rem 3rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.project-card {
-  flex: 1 1 auto;   /* grow and shrink */
-  min-width: 0;     /* fix flexbox shrinking */
-  max-width: none;  /* no max width */
-  background: #2c2c2c;
-  color: #00ffff;
-  border-radius: 15px;
-  padding: 2.5rem 3rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  overflow-y: auto;
-  font-size: 1rem;
-  line-height: 1.6;
-  position: relative;
-  opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  pointer-events: none;
-  cursor: pointer;
-  max-height: 100%;
-}
-
-.project-card.active {
-  opacity: 1;
-  transform: scale(1);
-  pointer-events: auto;
-  z-index: 10;
-}
-
-.project-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-  color: #00ffff;              /* Cyan headings */
-}
-
-.project-card p {
-  margin-bottom: 1.25rem;
-  color: #ccefff;              /* Light cyan text for content */
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Navigation buttons container */
-.project-nav {
-  flex: 0 0 80px; /* fixed width container for buttons */
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  pointer-events: auto;
-}
-
-/* Buttons style */
-.project-nav button {
-  background: #000000;           /* Black background */
-  color: white;                 /* White text */
-  border: none;                 /* Remove default border */
-  width: 90px;                  /* Square buttons */
-  height: 40px;
-  border-radius: 50%;           /* Circular buttons */
-  font-size: 1.4rem;            /* Large font for arrows or symbols */
-  font-weight: bold;            /* Bold text */
-  cursor: pointer;              /* Pointer cursor */
-  user-select: none;            /* Prevent text selection on click */
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6); /* Shadow for subtle depth */
-  transition: background 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-  display: flex;                /* Flex to center icon/text */
-  align-items: center;
-  justify-content: center;
-}
-
-.project-nav button:hover {
-  background: #00ffff;          /* Cyan background on hover */
-  color: #000000;               /* Black text on hover */
-}
