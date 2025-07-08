@@ -234,3 +234,21 @@ footer {
     height: 140px;
   }
 }
+
+.socials-footer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 200px;
+  padding-bottom: 30px;
+}
+
+.socials-footer a.social-icon {
+  font-size: 2rem;
+  color: #66aaff;
+  transition: color 0.3s ease;
+}
+
+.socials-footer a.social-icon:hover {
+  color: #aaddff;
+}
